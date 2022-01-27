@@ -13,7 +13,7 @@ export const GifGrid = ({category}) => {
             <hr></hr>
             <h3 className='animate__animated animate__fadeInDown'>{category}</h3>
 
-            { loading && <img src='./loading-animation.gif' alt='Cargando' className='cargando animate__animated animate__pulse'></img>}
+            { loading && <img src='loading-animation.gif' alt='Cargando' className='cargando animate__animated animate__pulse'></img>}
              <div className="card-grid">
                 {
                     //mapeamos el array categories para que nos devuelva su contenido
