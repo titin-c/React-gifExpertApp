@@ -7,11 +7,13 @@ export const AddCategory = ({setCategories}) => {
 
     const handleImputChange = (e) => {
         setImputValue(e.target.value);
+
     }
 
     const handleSubmit = (e) => {
         //Esto hace que no se refresque la página por defecto al enviar forms
         e.preventDefault();  
+
 
         // si la longitud , sin espacios, de valor del impurt es mayor a 0
         if(inputValue.trim().length > 0){
@@ -25,15 +27,19 @@ export const AddCategory = ({setCategories}) => {
     }
 
   return (
-  <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder='Inserta un Personaje'
-        value={inputValue}
-        onChange={handleImputChange}
-        >
-      </input>
-  </form>
+    <div className='buscador'>
+        <div>Buscador de GIF's:</div>
+        <form onSubmit={handleSubmit}>
+            <input
+                type="text"
+                placeholder='Inserta un Personaje...'
+                value={inputValue}
+                onChange={handleImputChange}
+                >
+            </input>
+            <button type='submit' >Buscar</button>
+        </form>
+    </div>
   )
 };
 

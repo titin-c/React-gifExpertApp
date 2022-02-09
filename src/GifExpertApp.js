@@ -3,11 +3,12 @@ import React,  {useState}  from 'react';
 import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
-const GifExpertApp  = () =>{
+export const GifExpertApp  = ({ defaultCategories = ['Popeye'] } ) =>{
 
-    // const categories = ['Goku', 'pikachu', 'Vegetta'];
-
-    const [categories, setCategories] = useState(['Pikatchu']);
+    // const defaultCategories = ['Goku', 'pikachu', 'Vegetta'];
+    
+    //const [categories, setCategories] = useState('pikachu');
+    const [categories, setCategories] = useState(defaultCategories);
 
     // función handleAdd
     // const handleAdd = () =>{
@@ -21,7 +22,7 @@ const GifExpertApp  = () =>{
 
     return (
         <>
-        <h2>GifExpertApp</h2>
+        <h1>GifExpertApp</h1>
         {/* añadimos el componente AddCategory*/}
         <AddCategory setCategories = {setCategories}/>
                 
